@@ -267,6 +267,11 @@ body{
 .terceira .max-width .timeline-content p{
     font-size: 22px;
 }
+.terceira .max-width .timeline-content a,
+.terceira .max-width .timeline-content i{
+    font-size: 22px;
+    color: rgb(166, 81, 245);
+}
 
 /*  Sessão footer  */
 footer{
