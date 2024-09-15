@@ -1,0 +1,305 @@
+/* Link da Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Protest+Guerrilla&display=swap');
+
+/* Resetar CSS */
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: whitesmoke;
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Rolagem suave */
+html{
+    scroll-behavior: smooth;
+    transition-timing-function: cubic-bezier(0.20, 0, 0.45, 0.94);
+}
+body{
+    overflow-x: hidden;
+}
+/*  Menu  Mobile */
+.menu-btn{
+    color: whitesmoke;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    width: 42px;
+    height: 45px;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: whitesmoke;
+    background: rgb(166, 81, 245);
+    box-shadow: 0px 0px 30px rgb(166, 81, 245);
+    border-radius: 50px;
+    font-size: 30px;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+    box-shadow: 0px 0px 60px rgb(166, 81, 245);
+}
+
+/* Sessão Ínicio */
+.primeira{
+    display: flex;
+    flex-direction: column;
+    background: url("../img/BannerHome.png") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+.primeira .max-width{
+    margin: auto 40px;
+    align-items: center;
+    text-align: left;
+    justify-content: left;
+}
+.primeira .primeira-content{
+    width: 100vh;
+}
+.primeira .primeira-content p{
+    font-size: 25px;
+}
+.primeira .primeira-content h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+.primeira .primeira-content p span{
+    color: rgb(166, 81, 245);
+    font-weight: 500;
+}
+.primeira .primeira-content a{
+    display: inline-block;
+    background: rgb(166, 81, 245);
+    color: whitesmoke;
+    font-size: 17px;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 2px solid rgb(166, 81, 245);
+    transition: all 0.3s ease;
+}
+.primeira .primeira-content a:hover{
+    color: rgb(166, 81, 245);
+    box-shadow: 0px 0px 20px rgb(166, 81, 245);
+    background: none;
+    letter-spacing: 0.5px;
+}
+
+/* Segunda Part - Sobre Mim */
+.segunda{
+    display: flex;
+    flex-direction: column;
+    background: url("../img/SobreMim.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+.segunda .max-width{
+    margin: 100px 10px;
+}
+.segunda .max-width .title{
+    font-size: 50px;
+    text-align: center;
+    color: #000;
+}
+.segunda .max-width .segunda-content{
+    display: flex;
+}
+.segunda .max-width .segunda-content p{
+    font-size: 20px;
+    color: #000;
+    text-align: right;
+    width: 100%;
+    margin: 20px 50px;
+}
+/* Slider Automático dos Skills */
+.segunda .max-width .segunda-content .carousel{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.segunda .max-width .segunda-content .carousel-slider{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Use 100% do espaço disponível */
+    height: 200px;
+}
+.segunda .max-width .segunda-content .carousel-list{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center; /* Garante que os itens fiquem centralizados */
+    transition: transform 0.1s linear;
+    will-change: transform; /* Melhorar performance de animação */
+}
+.segunda .max-width .segunda-content .carousel-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px; /* Define largura mínima para não cortar */
+    height: 100%; /* Garante que o item preencha toda a altura */
+    padding: 0 50px; /* Mantém um padding ajustado */
+    box-sizing: border-box; /* Inclui o padding nas dimensões */
+}
+.segunda .max-width .segunda-content .carousel-item:hover{
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10%;
+}
+.segunda .max-width .segunda-content .carousel-item img{
+    width: 100px;
+}
+
+/* Terceira */
+.terceira{
+    background-image: url('../img/Terceira.jpg');
+    box-shadow: 100px 0px 50px #000;
+    padding: 30px 10px;
+    background-size: cover;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.terceira .max-width{
+    width: 100%;
+    margin: auto;
+}
+.terceira .max-width .timeline-items{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.terceira .max-width .timeline-item .timeline-date{
+    font-size: 30px;
+}
+/* Linha central separando os conteúdos*/
+.terceira .max-width .timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: rgb(245, 240, 240);
+    left: calc(50% - 1px);
+}
+.terceira .max-width .timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+.terceira .max-width .timeline-item:last-child{
+    margin-bottom: 0;
+}
+.terceira .max-width .timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+.terceira .max-width .timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.terceira .max-width .timeline-dot{
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 10px;
+    height: 21px;
+    width: 21px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 25px rgb(245, 240, 240),
+                0 0 50px rgb(245, 240, 240);
+    border-radius: 50%;
+}
+.terceira .max-width .timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+.terceira .max-width .timeline-content{
+    background-color: rgba(0, 0, 0, 0.616);
+    border: 3px solid whitesmoke;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(245, 240, 240);
+    transition: 0.3s ease-in-out;
+}
+.terceira .max-width .timeline-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px whitesmoke;
+}
+.terceira .max-width h2{
+    font-size: 50px;
+    text-align: center;
+    margin: 50px 0;
+}
+.terceira .max-width .timeline-content h3{
+    font-size: 25px;
+}
+.terceira .max-width .timeline-content p{
+    font-size: 22px;
+}
+
+/*  Sessão footer  */
+footer{
+    background-image: url('../img/Terceira.jpg');
+    backdrop-filter: blur(10px);
+    padding: 15px 0px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: 100px 0px 50px #000;
+}
+footer .redes{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+footer .redes a{
+    font-size: 25px;
+    margin: 5px 30px;
+}
+footer .redes a:hover{
+    transform: scale(1.3);
+    opacity: 0.7;
+}
+footer p{
+    color: whitesmoke;
+}
+footer a{
+    color: rgb(8, 8, 8);
+    letter-spacing: 2px;
+}

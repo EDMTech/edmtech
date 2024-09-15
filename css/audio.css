@@ -1,0 +1,45 @@
+audio{
+    display: block; /* Oculta completamente sem ocupar espaço */
+    background-color: #f5f5f5; /* define uma cor de fundo */
+    border-radius: 30px; /* adiciona um raio de borda para arredondar as bordas */
+    padding: 0; /* adiciona um preenchimento interno de 20 pixels */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3); /* adiciona uma sombra à caixa de áudio */
+}
+.navbar .max-width .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#play-audio{
+    background-color: transparent;
+    border: none;
+    color: #fff; /* Cor do texto */
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+#play-audio:hover{
+    background-color: #e0e0e046; /* Mudança de cor ao passar o mouse */
+    border-radius: 20px;
+}
+@media(max-width: 500px){
+    #play-audio{
+        background-color: transparent; /* Botão transparente */
+        color: #fff; /* Cor do texto do botão */
+        padding: 5px 20px; /* Ajuste o tamanho do botão */
+        cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse sobre o botão */
+    }
+    .navbar.sticky{
+        opacity: 0.9;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        z-index: 5;
+    }
+    /* Esconde o botão quando a navbar está sticky */
+    .navbar.sticky ~ #play-audio{
+        display: none !important; /* Oculta o botão quando a navbar está sticky */
+        z-index: -1; /* Coloca o botão atrás de outros elementos */
+        pointer-events: none; /* Desativa eventos de ponteiro no botão */
+    }
+}

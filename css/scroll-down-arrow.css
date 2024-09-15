@@ -1,0 +1,39 @@
+.primeira .scroll-down-arrow,
+.segunda .scroll-down-arrow,
+.terceira .scroll-down-arrow,
+.quarta .scroll-down-arrow{
+    margin-left: auto;
+    margin-right: auto;
+}
+.primeira .scroll-down-arrow a ion-icon,
+.segunda .scroll-down-arrow a ion-icon,
+.terceira .scroll-down-arrow a ion-icon,
+.quarta .scroll-down-arrow a ion-icon{
+    font-size: 50px;
+    bottom: 0vh;
+    position: relative;
+    z-index: 5;
+    transition: opacity 0.30s ease-in-out;
+    animation-name: scroll-down-arrow;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation: float 3s ease-in-out infinite;
+}
+.primeira .scroll-down-arrow a img:hover{
+    filter: brightness(80%);
+}
+@keyframes float{
+    0%{
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-25px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+}
